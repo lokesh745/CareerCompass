@@ -1,0 +1,19 @@
+MDScreen:
+    name: 'advothers'
+    MDToolbar:
+        title: 'Adventure'
+        elevation: 10
+        pos_hint : {"center_x":0.5, "center_y": 0.93}
+        MDIconButton:
+            icon: 'logout'
+            pos_hint : {"center_x":0.9, "center_y": 0.5}
+            on_press: root.manager.current = 'others'
+    ScrollView:
+        pos_hint : {"center_x":0.5, "center_y": 0.38}
+        MDList:
+            OneLineListItem:
+                text: 'Tour Guide'
+            OneLineListItem:
+                text: 'Park Ranger'
+            OneLineListItem:
+                text: 'Photographer'

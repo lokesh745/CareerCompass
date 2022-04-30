@@ -1,0 +1,87 @@
+MDScreen:
+    name: 'others'
+    MDFloatLayout:
+        MDToolbar:
+            title: 'Others'
+            elevation: 10
+            pos_hint : {"center_x":0.5, "center_y": 0.93}
+            MDIconButton:
+                icon: 'logout'
+                pos_hint : {"center_x":0.9, "center_y": 0.5}
+                on_press: root.manager.current = 'explore'
+        Button:
+            text: "Choose your interest :"
+            font_size: "20sp"
+            size_hint: .75, .07
+            pos_hint: {"center_x": 0.5, "center_y": 0.81}
+            background_color: 0, 0, 0, 0
+            canvas.before:
+                Color:
+                    rgb: (255/255, 80/255, 80/255, 1)
+                RoundedRectangle:
+                    size: self.size
+                    pos: self.pos
+                    radius: [20]
+        Image:
+            source: "others.png"
+            pos_hint:{"x":0.0, "y": 0.1}
+        ScrollView:
+            pos_hint : {"center_x":0.5, "center_y": 0.0}
+            MDList:
+                OneLineListItem:
+                    text: 'Acting'
+                    on_press: root.manager.current = 'actothers'
+                OneLineListItem:
+                    text: 'Adventure'
+                    on_press: root.manager.current = 'advothers'
+                OneLineListItem:
+                    text: 'Agriculture'
+                    on_press: root.manager.current = 'agriothers'
+                OneLineListItem:
+                    text: 'Baking'
+                OneLineListItem:
+                    text: 'Beauty - Hair'
+                OneLineListItem:
+                    text: 'Beauty - Makeup'
+                OneLineListItem:
+                    text: 'Blogging'
+                OneLineListItem:
+                    text: 'Cafe Management'
+                OneLineListItem:
+                    text: 'Dancing'
+                OneLineListItem:
+                    text: 'Entertainment'
+                OneLineListItem:
+                    text: 'Filmmaking'
+                OneLineListItem:
+                    text: 'Fitness'
+                OneLineListItem:
+                    text: 'Modeling'
+                OneLineListItem:
+                    text: 'Music'
+                OneLineListItem:
+                    text: 'Music - Production'
+                OneLineListItem:
+                    text: 'Music - Teaching'
+                OneLineListItem:
+                    text: 'Photography'
+                OneLineListItem:
+                    text: 'Playing Instrument'
+                OneLineListItem:
+                    text: 'Singing'
+                OneLineListItem:
+                    text: 'Skill Based'
+                OneLineListItem:
+                    text: 'Small Business'
+                OneLineListItem:
+                    text: 'Speaking'
+                OneLineListItem:
+                    text: 'Sports'
+                OneLineListItem:
+                    text: 'Wellness'
+                OneLineListItem:
+                    text: 'Yoga'
+                OneLineListItem:
+                    text: 'Youtubing'
+                OneLineListItem:
+                    text: 'Youtubing'

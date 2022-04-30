@@ -1,0 +1,94 @@
+MDScreen:
+    name: 'explore'
+    MDFloatLayout:
+
+        MDToolbar:
+            title: 'Career_Clinic'
+            elevation: 10
+            pos_hint : {"center_x":0.5, "center_y": 0.93}
+            MDIconButton:
+                icon: 'logout'
+                pos_hint : {"center_x":0.9, "center_y": 0.5}
+                on_press: root.manager.current = 'login'
+
+        MDLabel:
+            text: "What are you doing currently ?"
+            font_size: "24sp"
+            pos_hint: {"center_x": .5, "center_y": .81}
+            halign: 'center'
+            color: rgba(255, 102, 102, 255)
+        Button:
+            text: "CLASS 10"
+            font_size: "20sp"
+            size_hint: .6, .08
+            pos_hint: {"center_x": 0.5, "center_y": 0.67}
+            background_color: 0, 0, 0, 0
+            on_release:
+                root.manager.current = "after_10"
+            canvas.before:
+                Color:
+                    rgb: (255/255, 153/255, 51/255, 1)
+                RoundedRectangle:
+                    size: self.size
+                    pos: self.pos
+                    radius: [20]
+        Button:
+            text: "CLASS 12"
+            font_size: "20sp"
+            size_hint: .6, .08
+            pos_hint: {"center_x": 0.5, "center_y": 0.54}
+            background_color: 0, 0, 0, 0
+            on_release:
+                root.manager.current = "class_12"
+            canvas.before:
+                Color:
+                    rgb: (255/255, 153/255, 51/255, 1)
+                RoundedRectangle:
+                    size: self.size
+                    pos: self.pos
+                    radius: [20]
+        Button:
+            text: "UNDER GRADUATION(UG)"
+            font_size: "20sp"
+            size_hint: .9, .08
+            pos_hint: {"center_x": 0.5, "center_y": 0.41}
+            background_color: 0, 0, 0, 0
+            on_release:
+                root.manager.current = "ug"
+            canvas.before:
+                Color:
+                    rgb: (255/255, 153/255, 51/255, 1)
+                RoundedRectangle:
+                    size: self.size
+                    pos: self.pos
+                    radius: [20]
+        Button:
+            text: "POST GRADUATION(PG)"
+            font_size: "20sp"
+            size_hint: .9, .08
+            pos_hint: {"center_x": 0.5, "center_y": 0.28}
+            background_color: 0, 0, 0, 0
+            on_release:
+                root.manager.current = "pg"
+            canvas.before:
+                Color:
+                    rgb: (255/255, 153/255, 51/255, 1)
+                RoundedRectangle:
+                    size: self.size
+                    pos: self.pos
+                    radius: [20]
+        Button:
+            text: "OTHERS"
+            font_size: "20sp"
+            size_hint: .6, .08
+            pos_hint: {"center_x": 0.5, "center_y": 0.15}
+            background_color: 0, 0, 0, 0
+            on_release:
+                root.manager.current = "others"
+            canvas.before:
+                Color:
+                    rgb: (255/255, 153/255, 51/255, 1)
+                RoundedRectangle:
+                    size: self.size
+                    pos: self.pos
+                    radius: [20]

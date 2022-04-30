@@ -1,0 +1,45 @@
+MDScreen:
+    name: 'yes'
+    MDFloatLayout:
+        MDToolbar:
+            title: 'Courses'
+            elevation: 10
+            pos_hint : {"center_x":0.5, "center_y": 0.93}
+            MDIconButton:
+                icon: 'logout'
+                pos_hint : {"center_x":0.9, "center_y": 0.5}
+                on_press: root.manager.current = 'it'
+        Button:
+            text: "Recommended Courses"
+            font_size: "20sp"
+            size_hint: .75, .07
+            pos_hint: {"center_x": 0.5, "center_y": 0.81}
+            background_color: 0, 0, 0, 0
+            canvas.before:
+                Color:
+                    rgb: (0/255, 204/255, 153/255, 1)
+                RoundedRectangle:
+                    size: self.size
+                    pos: self.pos
+                    radius: [20]
+        Image:
+            source: "others.png"
+            pos_hint:{"x":0.0, "y": 0.1}
+        ScrollView:
+            pos_hint : {"center_x":0.5, "center_y": 0.0}
+            MDList:
+                OneLineListItem:
+                    text: 'Computer Engineering'
+                OneLineListItem:
+                    text: 'Data Science'
+                OneLineListItem:
+                    text: 'Data Analysis'
+                OneLineListItem:
+                    text: 'AI'
+                OneLineListItem:
+                    text: 'Robotics'
+                OneLineListItem:
+                    text: 'IoT'
+                OneLineListItem:
+                    text: 'MBA'
+

@@ -1,0 +1,22 @@
+MDScreen:
+    name: 'science'
+    MDToolbar:
+        title: 'Science'
+        elevation: 10
+        pos_hint : {"center_x":0.5, "center_y": 0.93}
+        MDIconButton:
+            icon: 'logout'
+            pos_hint : {"center_x":0.9, "center_y": 0.5}
+            on_press: root.manager.current = 'home'
+    ScrollView:
+        pos_hint : {"center_x":0.5, "center_y": 0.38}
+        MDList:
+            OneLineListItem:
+                text: 'PCM'
+                on_press: root.manager.current = 'pcm'
+            OneLineListItem:
+                text: 'PCB'
+                on_press: root.manager.current = 'pcb'
+            OneLineListItem:
+                text: 'PCMB'
+                on_press: root.manager.current = 'pcmb'

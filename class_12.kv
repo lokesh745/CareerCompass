@@ -1,0 +1,79 @@
+MDScreen:
+    name: 'class_12'
+    MDFloatLayout:
+        MDToolbar:
+            title: 'Class 12'
+            elevation: 10
+            pos_hint : {"center_x":0.5, "center_y": 0.93}
+            MDIconButton:
+                icon: 'logout'
+                pos_hint : {"center_x":0.9, "center_y": 0.5}
+                on_press: root.manager.current = 'explore'
+        Button:
+            text: "Choose your stream :"
+            font_size: "20sp"
+            size_hint: .75, .07
+            pos_hint: {"center_x": 0.5, "center_y": 0.78}
+            background_color: 0, 0, 0, 0
+            canvas.before:
+                Color:
+                    rgb: (255/255, 80/255, 80/255, 1)
+                RoundedRectangle:
+                    size: self.size
+                    pos: self.pos
+                    radius: [20]
+        Image:
+            source: "12.png"
+            pos_hint:{"x":0.0, "y": 0.0}
+        Button:
+            text: "Science(PCM)"
+            font_size: "20sp"
+            size_hint: .4, .07
+            pos_hint: {"center_x": 0.25, "center_y": 0.26}
+            background_color: 0, 0, 0, 0
+            canvas.before:
+                Color:
+                    rgb: (255/255, 102/255, 102/255, 1)
+                RoundedRectangle:
+                    size: self.size
+                    pos: self.pos
+                    radius: [20]
+        Button:
+            text: "Science(PCB)"
+            font_size: "20sp"
+            size_hint: .4, .07
+            pos_hint: {"center_x": 0.75, "center_y": 0.26}
+            background_color: 0, 0, 0, 0
+            canvas.before:
+                Color:
+                    rgb: (255/255, 102/255, 102/255, 1)
+                RoundedRectangle:
+                    size: self.size
+                    pos: self.pos
+                    radius: [20]
+        Button:
+            text: "Commerce"
+            font_size: "20sp"
+            size_hint: .4, .07
+            pos_hint: {"center_x": 0.25, "center_y": 0.13}
+            background_color: 0, 0, 0, 0
+            canvas.before:
+                Color:
+                    rgb: (255/255, 102/255, 102/255, 1)
+                RoundedRectangle:
+                    size: self.size
+                    pos: self.pos
+                    radius: [20]
+        Button:
+            text: "Arts"
+            font_size: "20sp"
+            size_hint: .4, .07
+            pos_hint: {"center_x": 0.75, "center_y": 0.13}
+            background_color: 0, 0, 0, 0
+            canvas.before:
+                Color:
+                    rgb: (255/255, 102/255, 102/255, 1)
+                RoundedRectangle:
+                    size: self.size
+                    pos: self.pos
+                    radius: [20]

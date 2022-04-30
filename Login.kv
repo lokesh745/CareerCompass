@@ -1,0 +1,111 @@
+MDScreen:
+    name: "login"
+    MDFloatLayout:
+        md_bg_color: 1, 1, 1, 1
+        MDLabel:
+            text: "Hey !!"
+            font_size: "22sp"
+            pos_hint: {"center_x": .38, "center_y": .95}
+            halign: 'center'
+            color: rgba(255, 102, 153, 255)
+        MDLabel:
+            text: "Stuck Somewhere ?"
+            font_size: "23sp"
+            pos_hint: {"center_x": .4, "center_y": .9}
+            halign: 'center'
+            color: rgba(255, 102, 153, 255)
+        Image:
+            source: "careerclinic.png"
+            pos_hint:{"y": 0.22}
+        Button:
+            text: "We are here to GUIDE YOU !"
+            font_size: "22sp"
+            size_hint: .9, .07
+            pos_hint: {"center_x": 0.5, "center_y": 0.48}
+            background_color: 0, 0, 0, 0
+            canvas.before:
+                Color:
+                    rgb: (255/255, 153/255, 204/255, 1)
+                RoundedRectangle:
+                    size: self.size
+                    pos: self.pos
+                    radius: [20]
+        MDFloatLayout:
+            size_hint: .85, .08
+            pos_hint:{'center_x': 0.5, 'center_y': 0.37}
+            canvas:
+                Color:
+                    rgb: (238/255, 238/255, 238/255, 1)
+                RoundedRectangle:
+                    size: self.size
+                    pos: self.pos
+                    radius: [25]
+            TextInput:
+                id: username
+                hint_text: "Username"
+                size_hint: 1, None
+                pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+                height: self.minimum_height
+                multiline: False
+                cursor_color: 96/255, 74/255, 215/255, 1
+                cursor_width: "2sp"
+                foreground_color: 96/255, 74/255, 215/255, 1
+                background_color: 0, 0, 0, 0
+                padding: 15
+
+                font_size: "18sp"
+        MDFloatLayout:
+            size_hint: .85, .08
+            pos_hint:{'center_x': 0.5, 'center_y': 0.27}
+            canvas:
+                Color:
+                    rgb: (238/255, 238/255, 238/255, 1)
+                RoundedRectangle:
+                    size: self.size
+                    pos: self.pos
+                    radius: [25]
+            TextInput:
+                id: password
+                hint_text: "Password"
+                password: True
+                size_hint: 1, None
+                pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+                height: self.minimum_height
+                multiline: False
+                cursor_color: 96/255, 74/255, 215/255, 1
+                cursor_width: "2sp"
+                foreground_color: 96/255, 74/255, 215/255, 1
+                background_color: 0, 0, 0, 0
+                padding: 15
+
+                font_size: "18sp"
+        MDTextButton:
+            text: "Forget your Password?"
+            theme_text_color: "Custom"
+            text_color: 255/255, 153/255, 51/255, 1
+            pos_hint: {"center_x": 0.35, "center_y": 0.2}
+            on_release:
+                root.manager.current = "forgot"
+        Button:
+            text: "LOGIN"
+            font_size: "20sp"
+            size_hint: .45, .07
+            pos_hint: {"center_x": 0.5, "center_y": 0.13}
+            background_color: 0, 0, 0, 0
+            on_release: app.receive_data(username, password)
+            on_release:
+                root.manager.current = "explore"
+            canvas.before:
+                Color:
+                    rgb: (255/255, 153/255, 51/255, 1)
+                RoundedRectangle:
+                    size: self.size
+                    pos: self.pos
+                    radius: [20]
+        MDTextButton:
+            text: "Don't have an account? Sign up"
+            theme_text_color: "Custom"
+            text_color: 255/255, 153/255, 51/255, 1
+            pos_hint: {"center_x": 0.5, "center_y": 0.05}
+            on_release:
+                root.manager.current = "signup"

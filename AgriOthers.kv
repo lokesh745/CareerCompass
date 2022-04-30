@@ -1,0 +1,25 @@
+MDScreen:
+    name: 'agriothers'
+    MDToolbar:
+        title: 'Agiculture'
+        elevation: 10
+        pos_hint : {"center_x":0.5, "center_y": 0.93}
+        MDIconButton:
+            icon: 'logout'
+            pos_hint : {"center_x":0.9, "center_y": 0.5}
+            on_press: root.manager.current = 'others'
+    ScrollView:
+        pos_hint : {"center_x":0.5, "center_y": 0.38}
+        MDList:
+            OneLineListItem:
+                text: 'Agricultural Engineer'
+            OneLineListItem:
+                text: 'Agricultural Economist'
+            OneLineListItem:
+                text: 'Soil & Plant Scientist'
+            OneLineListItem:
+                text: 'Conservation Planner'
+            OneLineListItem:
+                text: 'Commercial Horticulturalist'
+            OneLineListItem:
+                text: 'Agricultural Salesperson'

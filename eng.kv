@@ -1,0 +1,55 @@
+MDScreen:
+    name: 'eng'
+    MDFloatLayout:
+        MDToolbar:
+            title: 'ENGINEERING'
+            elevation: 10
+            pos_hint : {"center_x":0.5, "center_y": 0.93}
+            MDIconButton:
+                icon: 'logout'
+                pos_hint : {"center_x":0.9, "center_y": 0.5}
+                on_press: root.manager.current = 'ug'
+        Button:
+            text: "Select your branch :"
+            font_size: "20sp"
+            size_hint: .75, .07
+            pos_hint: {"center_x": 0.5, "center_y": 0.81}
+            background_color: 0, 0, 0, 0
+            canvas.before:
+                Color:
+                    rgb: (0/255, 204/255, 153/255, 1)
+                RoundedRectangle:
+                    size: self.size
+                    pos: self.pos
+                    radius: [20]
+        ScrollView:
+            pos_hint : {"center_x":0.5, "center_y": 0.25}
+            MDList:
+                OneLineListItem:
+                    text: 'Computer Engineering'
+                OneLineListItem:
+                    text: 'Information Technology'
+                    on_press: root.manager.current = 'it'
+                OneLineListItem:
+                    text: 'Electronics Engineering'
+                OneLineListItem:
+                    text: 'Electronics and Telecommunications Engineering'
+                OneLineListItem:
+                    text: 'Mechanical Engineering'
+                OneLineListItem:
+                    text: 'Biomedical Engineering'
+                OneLineListItem:
+                    text: 'Civil Engineering'
+                OneLineListItem:
+                    text: 'Chemical Engineering'
+                OneLineListItem:
+                    text: 'Environmental Engineering'
+
+                OneLineListItem:
+                    text: 'Food Technology'
+                OneLineListItem:
+                    text: 'Industrial Engineering'
+                OneLineListItem:
+                    text: 'Textile Engineering'
+                OneLineListItem:
+                    text: 'Production and Industrial Engineering'
